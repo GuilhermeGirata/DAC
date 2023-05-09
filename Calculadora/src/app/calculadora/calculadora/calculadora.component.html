@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light m-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Projeto Calculadora</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <form>
+        <div class="form-group row">
+          <label for="numero1" class="col-sm-3 col-form-label">Número 1:</label>
+          <div class="col-sm-9">
+            <input id="numero1" class="form-control" type="text" placeholder="Digite o 1° número" #numero1>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="numero2" class="col-sm-3 col-form-label">Número 2:</label>
+          <div class="col-sm-9">
+            <input id="numero2" class="form-control" type="text" placeholder="Digite o 2° número" #numero2>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="resultado" class="col-sm-3 col-form-label">Resultado:</label>
+          <div class="col-sm-9">
+            <input id="resultado" class="form-control" type="text" [value]="getResultado ? getResultado : ''" readonly>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-12 text-center">
+            <button type="button" class="btn btn-primary mx-2" (click)="somar(numero1.value, numero2.value)">Somar</button>
+            <button type="button" class="btn btn-primary mx-2" (click)="subtrair(numero1.value, numero2.value)">Subtrair</button>
+            <button type="button" class="btn btn-primary mx-2" (click)="multiplicar(numero1.value, numero2.value)">Multiplicar</button>
+            <button type="button" class="btn btn-primary mx-2" (click)="dividir(numero1.value, numero2.value)">Dividir</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
